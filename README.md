@@ -1,6 +1,6 @@
 # Smart Workflows
 
-This is a repository for **Smart Workflows** - agentic Github workflows that use an AI agent
+This is a repository for **agentic Github workflows** that use an AI agent
 to automate Github projects in powerful ways.
 
 Smart Workflows come in two flavors:
