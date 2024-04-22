@@ -58,6 +58,6 @@ jobs:
             
             
             Do the following:
-            1. Read `.github/workflows/issue_formatter.yaml` as reference to understand the desired structure of the workflow file.
+            1. Read `automations/format-issue/workflow.yaml` as reference to understand the desired structure of the workflow file.
             2. Turn the free-text instructions provided by the user into actionable step-by-step instructions for the AI agent.
-            3. Generate the new Github workflow file
+            3. Generate the new Github workflow file in `automations/<automation-name-slug>/workflow.yaml`

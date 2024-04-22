@@ -1,0 +1,22 @@
+tools:
+  answer-question:
+    name: "🤖 Answer Question"
+    description: "Ask a question and the bot will find the answer for you."
+    labels: [question, answer]
+  quick-task:
+    name: "🚀 Quick Task"
+    description: "Ask the bot to perform a task for you using its capabilities."
+    labels: []
+automations:
+  format-issue:
+    name: "📝 Format and Label New Issues"
+    description: "Automatically format and label new issues."
+    labels: [issues, format, label]
+  chat-bot:
+    name: "🤖 Chat Bot"
+    description: "Turn any issue into a chat with the bot by adding the `chat` label."
+    labels: [chat, label, comment, issues]
+  pr-auto-review:
+    name: "🔍 PR Auto Review"
+    description: "Automatically review new pull requests."
+    labels: [review, pr, code-quality]
