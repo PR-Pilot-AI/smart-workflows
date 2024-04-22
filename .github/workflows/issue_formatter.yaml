@@ -1,0 +1,28 @@
+name: "📝 Format and Label New Issues"
+
+# Triggers the workflow on new issue creation
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  format-issue:
+    runs-on: ubuntu-latest
+    outputs:
+      task-url: ${{ steps.format.outputs.task-url }}
+    steps:
+      - name: Format GitHub Issue
+        id: format
+        uses: PR-Pilot-AI/smart-actions/format-issue@v1
+        with:
+
+          # API key for PR Pilot must be defined as a secret in the repository
+          api-key: ${{ secrets.PR_PILOT_API_KEY }}
+
+          # Number of the issue to be formatted
+          issue-number: ${{ github.event.issue.number }}
+
+          # Instructions for formatting the issue
+          formatting-instructions: |
+            1. Read `.bot_instructions/issue_formatting.md` for instructions on how to format issues
+            2. Edit the issue so that it meets those requirements

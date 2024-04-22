@@ -1,0 +1,28 @@
+name: "🔍 Review New Pull Request"
+
+# Triggers the workflow on new pull request creation
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  handle-pr:
+    runs-on: ubuntu-latest
+    outputs:
+      task-url: ${{ steps.review.outputs.task-url }}
+    steps:
+      - name: Handle New PR
+        id: review
+        uses: PR-Pilot-AI/smart-actions/pr-creation-handler@v1
+        with:
+
+          # API key for PR Pilot must be defined as a secret in the repository
+          api-key: ${{ secrets.PR_PILOT_API_KEY }}
+
+          # Number of the PR to be handled
+          pr-number: ${{ github.event.pull_request.number }}
+
+          # Instructions for handling the PR
+          agent-instructions: |
+            1. Read `.bot_instructions/pr_reviews.md` for instructions on how to review PRs
+            2. Review the PR accordingly and add your review as a comment to the PR

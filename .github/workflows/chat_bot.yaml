@@ -1,0 +1,24 @@
+name: "🤖 Chat Bot"
+
+on:
+  issues:
+    types: [labeled, commented]
+  issue_comment:
+    types: [created]
+
+jobs:
+  handle-chat:
+    if: >
+      (github.event.label.name == 'chat' || contains(github.event.issue.labels.*.name, 'chat')) &&
+      github.event.sender.login != 'pr-pilot-ai[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: AI Chat Response
+        uses: PR-Pilot-AI/smart-actions/quick-task@v1
+        with:
+          api-key: ${{ secrets.PR_PILOT_API_KEY }}
+          agent-instructions: |
+              @${{ github.event.sender.login }} commented on issue #${{ github.event.issue.number }}.
+              Read the content of issue #${{ github.event.issue.number }}.
+              If there are no comments yet, add a comment that makes sense in the context of the issue.
+              If there are comments, provide a response to the latest comment.

@@ -1,0 +1,28 @@
+name: "🤖 Answer Question"
+
+on:
+  workflow_dispatch:
+    inputs:
+      question:
+        description: 'What is your question?'
+        required: true
+
+jobs:
+  answer-question:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Respond to Question
+        uses: PR-Pilot-AI/smart-actions/quick-task@v1
+        with:
+          api-key: ${{ secrets.PR_PILOT_API_KEY }}
+          agent-instructions: |
+            The user has a question:
+
+            ```
+            ${{ github.event.inputs.question }}
+            ```
+
+            1. Understand the question.
+            2. Search the code base using ripgrep for any relevant information.
+            3. If necessary, search the internet for information.
+            4. Answer the question based on the information found in the code base and/or internet.

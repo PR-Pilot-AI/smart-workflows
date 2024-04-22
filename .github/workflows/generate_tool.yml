@@ -1,0 +1,63 @@
+name: "🧙‍♂️ Generate Tool"
+
+on:
+  workflow_dispatch:
+    inputs:
+      tool-name:
+        description: 'Name of the tool'
+        required: true
+      tool-inputs:
+        description: 'Inputs required for the tool'
+        required: true
+      agent-instructions:
+        description: 'What should the agent do when the tool is executed?'
+        required: true
+
+jobs:
+  automate-tool-creation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Automate Tool Creation
+        uses: PR-Pilot-AI/smart-actions/quick-task@v1
+        with:
+          api-key: ${{ secrets.PR_PILOT_API_KEY }}
+          agent-instructions: |
+            Your task is to generate a new Github workflow.
+            The workflow's purpose is to instruct an AI agent 
+            that can understand and execute instructions based on the workflow inputs.
+            
+            The workflow should be triggered manually and called `${{ github.event.inputs.tool-name }}`.
+            
+            The workflow should have the following inputs:
+            ```
+            ${{ github.event.inputs.tool-inputs }}
+            ```
+            
+            The user wants the agent to do the following:
+            ```
+            ${{ github.event.inputs.agent-instructions }}
+            ```
+            
+            These instructions need to be turned into an actionable step-by-step guide for the AI agent to follow.
+            Make sure the step-by-step instructions are clear and concise and ONLY contain instructions that 
+            the AI agent is capable of executing:
+            - Searching the code base
+            - CRUD operations on files
+            - Reading, editing and creating Github issues
+            - Searching the internet for information
+            
+            The workflow file must fulfill the following criteria:
+            - Name of the workflow starts with an emoji (UTF-8 character)
+            - Has only one job with one step that uses `PR-Pilot-AI/smart-actions/quick-task@v1`
+            - The step should have the following inputs:
+              - `api-key` (similar to reference workflow)
+              - `agent-instructions` (Step-by-step instructions for the AI agent)
+            - `agent-instructions` have the workflow inputs injected into them
+            - Workflow has inputs according to the user's instructions
+            - Workflow is triggered manually
+            
+            
+            Do the following:
+            1. Read `.github/workflows/build_something.yaml` as reference to understand the desired structure of the workflow file.
+            2. Turn the free-text instructions provided by the user into actionable step-by-step instructions for the AI agent.
+            3. Generate the new Github workflow file
