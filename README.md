@@ -39,6 +39,7 @@ Workflows for you to run manually via the Github Actions tab in your repository.
 | **[🤖 Answer Question](tools/answer-question)** | Ask a question about your project / code |
 | **[🧙‍♂️ Generate Automation](tools/generate-automation)** | Generate custom automations tailored to your project |
 | **[🧙‍♂️ Generate Tool](tools/generate-tool)** | Generate custom tools tailored to your project |
+| **[🔄 Import Workflow](tools/import-workflow)** | Facilitate interaction with an AI agent for importing workflows |
 
 ### Contributing
 
@@ -48,4 +49,3 @@ If you'd like to contribute workflows, simply:
 2. Run the **[🧙‍♂️ Generate Automation](tools/generate-automation)** or **[🧙‍♂️ Generate Tool](tools/generate-tool)** workflows
 3. Customize the code the agent generated for you in a PR and merge it
 4. Open a PR to this project
-
