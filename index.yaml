@@ -10,7 +10,7 @@ tools:
   generate-tool:
     name: "🧙‍♂️ Generate Tool"
     description: "Generates a new Tool tailored to your project's needs."
-    labels: [automation, tool, workflow]
+    labels: [generate, tool, meta]
 automations:
   format-issue:
     name: "📝 Format and Label New Issues"
