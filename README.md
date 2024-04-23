@@ -3,21 +3,23 @@
 This is a repository for **agentic Github workflows** that use an AI agent
 to automate Github projects in powerful ways.
 
-Smart Workflows come in two flavors:
-1. **Automations** - workflows that run automatically in response to Github events
-2. **Tools** - workflows for you to run manually
-
-All workflows are **fully customizable** using natural language instructions.
+All workflows are **plug-and-play** and **fully customizable** using natural language instructions.
 
 ## How to Use
-To use the workflows in your project, follow these steps:
+To use Smart Workflows in your project:
 
 1. **[Install the AI agent](https://github.com/apps/pr-pilot-ai/installations/new)** on your repository
 2. Copy one or more workflows into `.github/workflows/` in your repository
 
 That's it! You can use the workflows from the `Actions` tab in your repository.
 
+## Smart Workflow Repository
+
+Smart Workflows come in two flavors **Automations** and **Tools**. 
+
 ## Automations
+
+Workflows that run automatically in response to [Github events](https://docs.github.com/en/rest/using-the-rest-api/github-event-types?apiVersion=2022-11-28)
 
 | Name                                                       | Description                                                                |
 |------------------------------------------------------------|----------------------------------------------------------------------------|
@@ -27,6 +29,8 @@ That's it! You can use the workflows from the `Actions` tab in your repository.
 | [📚 Help with Documentation](automations/help-with-documentation) | Automatically assists with documentation tasks when the `documentation` label is added to an issue |
 
 ## Tools
+
+Workflows for you to run manually via the Github Actions tab in your repository.
 
 | Name | Description                                  |
 | ---- |----------------------------------------------|
