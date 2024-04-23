@@ -7,6 +7,8 @@ Smart Workflows come in two flavors:
 1. **Automations** - workflows that run automatically in response to Github events
 2. **Tools** - workflows for you to run manually
 
+All workflows are **fully customizable** using natural language instructions.
+
 ## How to Use
 To use the workflows in your project, follow these steps:
 
