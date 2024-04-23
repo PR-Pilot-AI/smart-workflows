@@ -1,6 +1,6 @@
 # 🤖 Chat Bot Automation
 
-This automation enhances interaction on issues by providing automated responses to comments on issues labeled with `chat`. It's designed to engage users by replying to their comments under specific conditions.
+This automation enables you to turn any Github issue into a conversation with your AI agent by providing automated responses to comments on issues labeled with `chat`.
 
 ## How it Works
 
