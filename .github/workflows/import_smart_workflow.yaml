@@ -27,4 +27,19 @@ jobs:
             echo "Path not found" && exit 1
           fi
       - name: Copy workflow file
-        run: cp ${{ steps.filepath.outputs.path }} .github/workflows/${{ github.event.inputs.workflow-id }}.yaml
+        id: print-workflow
+        run: cat ${{ steps.filepath.outputs.path }}
+      - name: Import Workflow
+        uses: PR-Pilot-AI/smart-actions/quick-task@v1
+        with:
+          api-key: ${{ secrets.PR_PILOT_API_KEY }}
+          agent-instructions: |
+            Create a new file in `.github/workflows/` for the following workflow:
+
+            ---
+            
+            ${{ steps.print-workflow.outputs.path }}
+
+            ---
+
+            Respond with a few suggestions how the user could customize the workflow for their own preferences or needs.
