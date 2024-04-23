@@ -9,8 +9,12 @@ tools:
     labels: []
   generate-automation:
     name: "🧙‍♂️ Generate Automation"
-    description: "Enables the creation of custom automations within your GitHub repository."
-    labels: [automation, custom, github]
+    description: "Generates a new Automation tailored to your project's needs."
+    labels: [generate, automation, meta]
+  generate-tool:
+    name: "🧙‍♂️ Generate Tool"
+    description: "Generates a new Tool tailored to your project's needs."
+    labels: [generate, tool, meta]
 automations:
   format-issue:
     name: "📝 Format and Label New Issues"
