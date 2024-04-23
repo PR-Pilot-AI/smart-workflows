@@ -11,6 +11,11 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout PR-Pilot-AI/smart-workflows
+        uses: actions/checkout@v2
+        with:
+          repository: PR-Pilot-AI/smart-workflows
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Determine workflow file path
         id: filepath
         run: |
