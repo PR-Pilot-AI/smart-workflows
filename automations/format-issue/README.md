@@ -4,7 +4,7 @@ This automation listens for new issues created in your repository and automatica
 
 ## How to Use
 
-1. Copy the **[Workflow YAML](.workflow.yaml)** file into your `.github/workflows` directory. 
+1. Copy the **[Workflow YAML](./workflow.yaml)** file into your `.github/workflows` directory. 
 2. Open a new issue in your repository and see the magic happen!
 
 ## Customization Ideas
