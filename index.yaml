@@ -7,6 +7,10 @@ tools:
     name: "🚀 Quick Task"
     description: "Ask the bot to perform a task for you using its capabilities."
     labels: []
+  generate-tool:
+    name: "🧙‍♂️ Generate Tool"
+    description: "Automates the creation of new Github workflows for user-defined tools."
+    labels: [automation, tool, workflow]
 automations:
   format-issue:
     name: "📝 Format and Label New Issues"
