@@ -1,6 +1,6 @@
 # 🧙‍♂️ Generate Tool
 
-A powerful tool that automates the creation of new Github workflows, enabling users to quickly generate tools for interacting with an AI agent within their repository.
+A powerful tool that automates the creation of custom tools for your Github project.
 
 ## How to Use
 
@@ -13,6 +13,6 @@ This tool requires the following inputs:
 
 | Input | Description | Example |
 | --- | --- | --- |
-| `tool-name` | Name of the tool you want to create. | `My Custom Tool` |
-| `tool-inputs` | Inputs required for the tool, formatted as a string. | `input1: description, input2: description` |
-| `agent-instructions` | Detailed instructions for what the agent should do when the tool is executed. | `Create an issue summarizing the tool's purpose and inputs.` |
+| `tool-name` | Name of the tool you want to create. | `Issue Summarizer` |
+| `tool-inputs` | Inputs required for the tool. | `The issue number` |
+| `agent-instructions` | Detailed instructions for what the agent should do when the tool is executed. | `Summarize the issue and add the summary as a comment` |
