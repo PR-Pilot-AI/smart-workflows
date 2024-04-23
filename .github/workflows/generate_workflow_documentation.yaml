@@ -16,6 +16,7 @@ jobs:
         with:
           api-key: ${{ secrets.PR_PILOT_API_KEY }}
           agent-instructions: |
-            1. Look at `automations/chat-bot/README.md` to see how the README file for the workflow should be structured.
-            2. Read the workflow file `automations/${{ github.event.inputs.workflow }}/workflow.yaml` to understand the workflow.
-            3. Create a README file in `automations/${{ github.event.inputs.workflow }}/README.md` similar to the one you read in step 1.
+            1. Look at `tools/quick-task/README.md` to see how the README file for the workflow should be structured.
+            2. Read the workflow file `tools/${{ github.event.inputs.workflow }}/workflow.yaml` to understand the workflow.
+            3. Create a README file in `tools/${{ github.event.inputs.workflow }}/README.md` similar to the one you read in step 1.
+            4. Make sure the tool is listed in `index.yaml` and `README.md`.

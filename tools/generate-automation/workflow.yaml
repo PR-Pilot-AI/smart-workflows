@@ -1,39 +1,38 @@
-name: "🧙‍♂️ Generate Tool"
+name: "🧙‍♂️ Generate Automation"
 
 on:
   workflow_dispatch:
     inputs:
-      tool-name:
-        description: 'Name of the tool'
+      automation-name:
+        description: 'Name of the automation'
         required: true
-      tool-inputs:
-        description: 'Inputs required for the tool'
+      trigger:
+        description: 'What should trigger the automation?'
         required: true
       agent-instructions:
-        description: 'What should the agent do when the tool is executed?'
+        description: 'What should the agent do when the automation is triggered?'
         required: true
 
 jobs:
-  automate-tool-creation:
+  create-new-automation:
     runs-on: ubuntu-latest
     steps:
-      - name: Automate Tool Creation
+      - name: Create New Automation
         uses: PR-Pilot-AI/smart-actions/quick-task@v1
         with:
           api-key: ${{ secrets.PR_PILOT_API_KEY }}
           agent-instructions: |
             Your task is to generate a new Github workflow.
-            The workflow's purpose is to serve as a tool for the user to interact with an AI agent
-            that can operate on the repository.
+            The workflow's purpose is to have an AI agent respond to a given trigger in the repository.
             
-            The workflow should be called `${{ github.event.inputs.tool-name }}`.
+            The workflow should be called `${{ github.event.inputs.automation-name }}`.
             
-            It should have the following inputs:
+            It should be triggered when:
             ``` 
-            ${{ github.event.inputs.tool-inputs }}
+            ${{ github.event.inputs.trigger }}
             ```
             
-            When triggered, the user wants the agent to do the following with the given inputs:
+            When triggered, the user wants the agent to do the following:
             ```
             ${{ github.event.inputs.agent-instructions }}
             ```
@@ -56,10 +55,10 @@ jobs:
             github context variables.
             
             Do the following:
-            1. Read `tools/quick-task/workflow.yaml` as reference to understand the desired structure of the workflow file.
+            1. Read `automations/format-issue/workflow.yaml` as reference to understand the desired structure of the workflow file.
             2. Turn the free-text instructions provided by the user into actionable step-by-step instructions for the AI agent.
-            3. Generate the new Github workflow file in `tools/<tool-name-slug>/workflow.yaml`
-            4. Read `tools/quick-task/README.md` as reference to understand the desired structure of the README file for the workflow.
-            5. Generate the new README file in `tools/<tool-name-slug>/README.md`
-            6. Add the tool to `index.yaml` with the appropriate details
-            7. Add the tool to the README.md file with the appropriate details
+            3. Generate the new Github workflow file in `automations/<automation-name-slug>/workflow.yaml`
+            4. Read `automations/format-issue/README.md` as reference to understand the desired structure of the README file for the workflow.
+            5. Generate the new README file in `automations/<automation-name-slug>/README.md`
+            6. Add the automation to `index.yaml` with the appropriate details
+            7. Add the automation to the README.md file with the appropriate details
