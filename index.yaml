@@ -20,3 +20,7 @@ automations:
     name: "🔍 PR Auto Review"
     description: "Automatically review new pull requests."
     labels: [review, pr, code-quality]
+  investigate-bug:
+    name: "🐞 Investigate Bug"
+    description: "Automatically investigates issues labeled as `bug` by analyzing the codebase and providing suggestions."
+    labels: [bug, investigate, code-analysis]
