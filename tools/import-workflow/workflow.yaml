@@ -15,4 +15,9 @@ jobs:
         uses: PR-Pilot-AI/smart-actions/quick-task@v1
         with:
           api-key: ${{ secrets.PR_PILOT_API_KEY }}
-          agent-instructions: "Scrape `https://raw.githubusercontent.com/PR-Pilot-AI/smart-workflows/main/index.yaml` to see the available workflows. If none match the user's input, abort. Otherwise scrape the matching workflow file from `https://raw.githubusercontent.com/PR-Pilot-AI/smart-workflows/main/{'automations'|'tools'}/{workflow-slug}/workflow.yaml` and create it in `.github/workflows` using the workflow description from the input as the file name."
+          agent-instructions: |
+            The user wants to import the following workflow: `{{ github.event.inputs.workflow_description }}`
+            Scrape `https://raw.githubusercontent.com/PR-Pilot-AI/smart-workflows/main/index.yaml` to see the available workflows.
+            If none match the user's input, abort.
+            Otherwise scrape the matching workflow file from `https://raw.githubusercontent.com/PR-Pilot-AI/smart-workflows/main/{'automations'|'tools'}/{workflow-slug}/workflow.yaml` 
+            and create it in `.github/workflows`.
