@@ -1,6 +1,6 @@
 # 🔄 Import Workflow
 
-A tool designed to facilitate the interaction with an AI agent for importing workflows into the repository.
+Enables you to install a Smart Workflow into your project with the click of a button.
 
 ## How to Use
 
@@ -15,4 +15,4 @@ This tool requires the following input:
 
 | Input | Description | Example |
 | --- | --- | --- |
-| `workflow_description` | The name or description of the workflow you want to import. | `Automated PR Labeler` |
+| `workflow_description` | The name or description of the workflow you want to import. | `Quick Task` |
