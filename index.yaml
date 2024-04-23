@@ -17,7 +17,7 @@ tools:
     labels: [generate, tool, meta]
   import-workflow:
     name: "🔄 Import Workflow"
-    description: "Import a Smart Workflow from the repository."
+    description: "Install a Smart Workflow into your project with the click of a button."
     labels: [import, workflow, meta]
 automations:
   format-issue:
