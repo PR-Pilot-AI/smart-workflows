@@ -13,4 +13,17 @@ To use the workflows in your project, follow these steps:
 1. **[Install the AI agent](https://github.com/apps/pr-pilot-ai/installations/new)** on your repository
 2. Copy one or more workflows into `.github/workflows/` in your repository
 
-That's it! Now your project is ready to use the Smart Workflows.
+That's it! You can use the workflows from the `Actions` tab in your repository.
+
+## Automations
+
+| Name                                                       | Description                                                                |
+|------------------------------------------------------------|----------------------------------------------------------------------------|
+| [📝 Format and Label New Issues](automations/format-issue) | Automatically format and label every new issue created in your project     |
+| [🔍 PR Auto Review](automations/pr-auto-review)            | Every new PR will be reviewed by an AI Agent according to your preferences |
+
+## Tools
+
+| Name | Description                                  |
+| ---- |----------------------------------------------|
+| [🚀 Quick Task](tools/quick-task) | Simply ask the agent to do something for you |

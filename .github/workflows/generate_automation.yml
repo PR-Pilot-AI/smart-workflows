@@ -23,12 +23,11 @@ jobs:
           api-key: ${{ secrets.PR_PILOT_API_KEY }}
           agent-instructions: |
             Your task is to generate a new Github workflow.
-            The workflow's purpose is to automate something in the Github repository by using an AI agent 
-            that can understand and execute the instructions provided in the workflow file.
+            The workflow's purpose is to have an AI agent respond to a given trigger in the repository.
             
             The workflow should be called `${{ github.event.inputs.automation-name }}`.
             
-            It should run when:
+            It should be triggered when:
             ``` 
             ${{ github.event.inputs.trigger }}
             ```
@@ -39,12 +38,10 @@ jobs:
             ```
             
             These instructions need to be turned into an actionable step-by-step guide for the AI agent to follow.
-            Make sure the step-by-step instructions are clear and concise and ONLY contain instructions that 
-            the AI agent is capable of executing:
-            - Searching the code base
-            - CRUD operations on files
-            - Reading, editing and creating Github issues
-            - Searching the internet for information
+            Make sure the step-by-step instructions are clear and concise.
+            
+            Assume that the agent has the same capabilities as you do. It is important to only include 
+            instructions that are within the agent's capabilities.
             
             The workflow file must fulfill the following criteria:
             - Name of the workflow starts with an emoji (UTF-8 character)
@@ -52,12 +49,14 @@ jobs:
             - The step should have the following inputs:
               - `api-key` (similar to reference workflow)
               - `agent-instructions` (Step-by-step instructions for the AI agent)
-            - `agent-instructions` have the workflow inputs injected into them
-            - Workflow has inputs according to the user's instructions
-            - Workflow is triggered according to user's specification
             
+            If the agent's task requires data from the workflow run (e.g. issue ID, commit msg, etc),
+            then the text for `agent-instructions` should have these values injected into them using the 
+            github context variables.
             
             Do the following:
             1. Read `automations/format-issue/workflow.yaml` as reference to understand the desired structure of the workflow file.
             2. Turn the free-text instructions provided by the user into actionable step-by-step instructions for the AI agent.
             3. Generate the new Github workflow file in `automations/<automation-name-slug>/workflow.yaml`
+            4. Add the automation to `index.yaml` with the appropriate details
+            5. Add the automation to the README.md file with the appropriate details
