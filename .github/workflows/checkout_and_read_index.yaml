@@ -1,13 +1,25 @@
 name: Checkout and Read Index File
 
-on: [push]
+on:
+  workflow_dispatch:
+    inputs:
+      workflow-id:
+        description: ID of the workflow to copy
+        required: true
 
 jobs:
-  checkout-and-read:
+  setup:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          repository: 'PR-Pilot-AI/smart-workflows'
-      - name: Read index.yaml
-        run: cat index.yaml
+      - name: Determine workflow file path
+        id: filepath
+        run: |
+          if [ -f tools/${{ github.event.inputs.workflow-id }}/workflow.yaml ]; then
+            echo "::set-output name=path::tools/${{ github.event.inputs.workflow-id }}/workflow.yaml"
+          elif [ -f automations/${{ github.event.inputs.workflow-id }}/workflow.yaml ]; then
+            echo "::set-output name=path::automations/${{ github.event.inputs.workflow-id }}/workflow.yaml"
+          else
+            echo "Path not found" && exit 1
+          fi
+      - name: Copy workflow file
+        run: cp ${{ steps.filepath.outputs.path }} .github/workflows/${{ github.event.inputs.workflow-id }}.yaml
