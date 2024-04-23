@@ -3,10 +3,10 @@
 This is a repository for **agentic Github workflows** that use an AI agent
 to automate Github projects in powerful ways.
 
-All workflows are **plug-and-play** and **fully customizable** using natural language instructions.
+* **plug-and-play** - Works out-of-the box, just copy YAML files
+* **fully customizable** using natural language instructions.
 
-## How to Use
-To use Smart Workflows in your project:
+To use them in your project:
 
 1. **[Install the AI agent](https://github.com/apps/pr-pilot-ai/installations/new)** on your repository
 2. Copy one or more workflows into `.github/workflows/` in your repository
@@ -39,4 +39,13 @@ Workflows for you to run manually via the Github Actions tab in your repository.
 | **[🤖 Answer Question](tools/answer-question)** | Ask a question about your project / code |
 | **[🧙‍♂️ Generate Automation](tools/generate-automation)** | Generate custom automations tailored to your project |
 | **[🧙‍♂️ Generate Tool](tools/generate-tool)** | Generate custom tools tailored to your project |
+
+### Contributing
+
+If you'd like to contribute workflows, simply:
+
+1. Fork the project
+2. Run the **[🧙‍♂️ Generate Automation](tools/generate-automation)** or **[🧙‍♂️ Generate Tool](tools/generate-tool)** workflows
+3. Customize the code the agent generated for you in a PR and merge it
+4. Open a PR to this project
 
