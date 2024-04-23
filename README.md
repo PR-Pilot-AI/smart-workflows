@@ -21,6 +21,7 @@ That's it! You can use the workflows from the `Actions` tab in your repository.
 |------------------------------------------------------------|----------------------------------------------------------------------------|
 | [📝 Format and Label New Issues](automations/format-issue) | Automatically format and label every new issue created in your project     |
 | [🔍 PR Auto Review](automations/pr-auto-review)            | Every new PR will be reviewed by an AI Agent according to your preferences |
+| [🐞 Investigate Bug](automations/investigate-bug)          | Automatically investigates issues labeled as `bug` by analyzing the codebase and providing suggestions |
 
 ## Tools
 

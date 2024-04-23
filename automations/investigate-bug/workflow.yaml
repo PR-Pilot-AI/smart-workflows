@@ -1,0 +1,23 @@
+name: "🐞 Investigate Bug"
+
+# Triggers the workflow when a `bug` label is added to an issue
+on:
+  issues:
+    types: [labeled]
+    
+jobs:
+  investigate-bug:
+    runs-on: ubuntu-latest
+    if: "github.event.label.name == 'bug'"
+    steps:
+      - name: Investigate Bug Issue
+        uses: PR-Pilot-AI/smart-actions/quick-task@v1
+        with:
+          api-key: ${{ secrets.PR_PILOT_API_KEY }}
+          agent-instructions: |
+            1. Read the issue with ID `${{ github.event.issue.number }}`.
+            2. Analyze the issue description to identify keywords related to the bug.
+            3. Use `functions.search_with_ripgrep` to search the codebase for files related to these keywords.
+            4. Read the identified files.
+            5. Generate a list of suggestions/recommendations based on the issue and the contents of the related files.
+            6. Comment on the issue with the list of suggestions/recommendation.
