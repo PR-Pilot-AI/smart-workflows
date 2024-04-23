@@ -7,6 +7,10 @@ tools:
     name: "🚀 Quick Task"
     description: "Ask the bot to perform a task for you using its capabilities."
     labels: []
+  generate-automation:
+    name: "🧙‍♂️ Generate Automation"
+    description: "Enables the creation of custom automations within your GitHub repository."
+    labels: [automation, custom, github]
 automations:
   format-issue:
     name: "📝 Format and Label New Issues"
