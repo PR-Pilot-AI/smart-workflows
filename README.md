@@ -36,5 +36,7 @@ Workflows for you to run manually via the Github Actions tab in your repository.
 | Name | Description                                  |
 | ---- |----------------------------------------------|
 | **[🚀 Quick Task](tools/quick-task)** | Simply ask the agent to do something for you |
+| **[🤖 Answer Question](tools/answer-question)** | Ask a question about your project / code |
 | **[🧙‍♂️ Generate Automation](tools/generate-automation)** | Generate custom automations tailored to your project |
 | **[🧙‍♂️ Generate Tool](tools/generate-tool)** | Generate custom tools tailored to your project |
+
