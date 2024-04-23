@@ -38,7 +38,7 @@ jobs:
 
             ---
             
-            ${{ steps.print-workflow.outputs.path }}
+            ${{ steps.print-workflow.outputs.content }}
 
             ---
 
