@@ -1,10 +1,10 @@
-name: Checkout and Read Index File
+name: 🔄 Import Smart Workflow
 
 on:
   workflow_dispatch:
     inputs:
       workflow-id:
-        description: ID of the workflow to copy
+        description: ID of the workflow to import
         required: true
 
 jobs:
