@@ -1,0 +1,13 @@
+name: Checkout and Read Index File
+
+on: [push]
+
+jobs:
+  checkout-and-read:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          repository: 'PR-Pilot-AI/smart-workflows'
+      - name: Read index.yaml
+        run: cat index.yaml
