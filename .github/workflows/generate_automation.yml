@@ -58,5 +58,7 @@ jobs:
             1. Read `automations/format-issue/workflow.yaml` as reference to understand the desired structure of the workflow file.
             2. Turn the free-text instructions provided by the user into actionable step-by-step instructions for the AI agent.
             3. Generate the new Github workflow file in `automations/<automation-name-slug>/workflow.yaml`
-            4. Add the automation to `index.yaml` with the appropriate details
-            5. Add the automation to the README.md file with the appropriate details
+            4. Read `automations/format-issue/README.md` as reference to understand the desired structure of the README file for the workflow.
+            5. Generate the new README file in `automations/<automation-name-slug>/README.md`
+            6. Add the automation to `index.yaml` with the appropriate details
+            7. Add the automation to the README.md file with the appropriate details

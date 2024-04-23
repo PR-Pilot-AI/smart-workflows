@@ -21,12 +21,13 @@ Smart Workflows come in two flavors **Automations** and **Tools**.
 
 Workflows that run automatically in response to [Github events](https://docs.github.com/en/rest/using-the-rest-api/github-event-types?apiVersion=2022-11-28)
 
-| Name                                                       | Description                                                                |
-|------------------------------------------------------------|----------------------------------------------------------------------------|
-| **[📝 Format and Label New Issues](automations/format-issue)** | Automatically format and label every new issue created in your project     |
-| **[🔍 PR Auto Review](automations/pr-auto-review)**            | Every new PR will be reviewed by an AI Agent according to your preferences |
+| Name                                                       | Description                                                                                            |
+|------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| **[🤖 Chat Bot](automations/chat-bot)**                      | Turn any Github issue into a conversation with your AI agent by adding the `chat` label                |
+| **[📝 Format and Label New Issues](automations/format-issue)** | Automatically format and label every new issue created in your project                                 |
+| **[🔍 PR Auto Review](automations/pr-auto-review)**            | Every new PR will be reviewed by an AI Agent according to your preferences                             |
 | **[🐞 Investigate Bug](automations/investigate-bug)**          | Automatically investigates issues labeled as `bug` by analyzing the codebase and providing suggestions |
-| **[📚 Help with Documentation](automations/help-with-documentation)** | Automatically assists with documentation tasks when the `documentation` label is added to an issue |
+| **[📚 Help with Documentation](automations/help-with-documentation)** | Automatically assists with documentation tasks when the `documentation` label is added to an issue     |
 
 ### Tools
 
