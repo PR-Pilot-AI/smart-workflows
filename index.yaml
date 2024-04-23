@@ -15,6 +15,10 @@ tools:
     name: "🧙‍♂️ Generate Tool"
     description: "Generates a new Tool tailored to your project's needs."
     labels: [generate, tool, meta]
+  import-workflow:
+    name: "🔄 Import Workflow"
+    description: "Install a Smart Workflow into your project with the click of a button."
+    labels: [import, workflow, meta]
 automations:
   format-issue:
     name: "📝 Format and Label New Issues"
