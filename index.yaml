@@ -17,8 +17,8 @@ tools:
     labels: [generate, tool, meta]
   import-workflow:
     name: "🔄 Import Workflow"
-    description: "A tool designed to facilitate the interaction with an AI agent for importing workflows into the repository."
-    labels: [import, workflow, ai]
+    description: "Import a Smart Workflow from the repository."
+    labels: [import, workflow, meta]
 automations:
   format-issue:
     name: "📝 Format and Label New Issues"
