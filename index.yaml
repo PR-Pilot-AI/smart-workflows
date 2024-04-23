@@ -7,6 +7,10 @@ tools:
     name: "🚀 Quick Task"
     description: "Ask the bot to perform a task for you using its capabilities."
     labels: []
+  generate-automation:
+    name: "🧙‍♂️ Generate Automation"
+    description: "Generates a new Automation tailored to your project's needs."
+    labels: [generate, automation, meta]
   generate-tool:
     name: "🧙‍♂️ Generate Tool"
     description: "Generates a new Tool tailored to your project's needs."
