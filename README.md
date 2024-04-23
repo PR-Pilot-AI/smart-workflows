@@ -11,27 +11,27 @@ To use Smart Workflows in your project:
 1. **[Install the AI agent](https://github.com/apps/pr-pilot-ai/installations/new)** on your repository
 2. Copy one or more workflows into `.github/workflows/` in your repository
 
-That's it! You can use the workflows from the `Actions` tab in your repository.
+That's it!
 
-## Smart Workflow Repository
+## Plug-and-Play Workflows
 
 Smart Workflows come in two flavors **Automations** and **Tools**. 
 
-## Automations
+### Automations
 
 Workflows that run automatically in response to [Github events](https://docs.github.com/en/rest/using-the-rest-api/github-event-types?apiVersion=2022-11-28)
 
 | Name                                                       | Description                                                                |
 |------------------------------------------------------------|----------------------------------------------------------------------------|
-| [📝 Format and Label New Issues](automations/format-issue) | Automatically format and label every new issue created in your project     |
-| [🔍 PR Auto Review](automations/pr-auto-review)            | Every new PR will be reviewed by an AI Agent according to your preferences |
-| [🐞 Investigate Bug](automations/investigate-bug)          | Automatically investigates issues labeled as `bug` by analyzing the codebase and providing suggestions |
-| [📚 Help with Documentation](automations/help-with-documentation) | Automatically assists with documentation tasks when the `documentation` label is added to an issue |
+| **[📝 Format and Label New Issues](automations/format-issue)** | Automatically format and label every new issue created in your project     |
+| **[🔍 PR Auto Review](automations/pr-auto-review)**            | Every new PR will be reviewed by an AI Agent according to your preferences |
+| **[🐞 Investigate Bug](automations/investigate-bug)**          | Automatically investigates issues labeled as `bug` by analyzing the codebase and providing suggestions |
+| **[📚 Help with Documentation](automations/help-with-documentation)** | Automatically assists with documentation tasks when the `documentation` label is added to an issue |
 
-## Tools
+### Tools
 
 Workflows for you to run manually via the Github Actions tab in your repository.
 
 | Name | Description                                  |
 | ---- |----------------------------------------------|
-| [🚀 Quick Task](tools/quick-task) | Simply ask the agent to do something for you |
+| **[🚀 Quick Task](tools/quick-task)** | Simply ask the agent to do something for you |
