@@ -36,3 +36,4 @@ Workflows for you to run manually via the Github Actions tab in your repository.
 | Name | Description                                  |
 | ---- |----------------------------------------------|
 | **[🚀 Quick Task](tools/quick-task)** | Simply ask the agent to do something for you |
+| **[🤖 Answer Question](tools/answer-question)** | Ask a question and the bot will find the answer for you |
