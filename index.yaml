@@ -9,7 +9,7 @@ tools:
     labels: []
   generate-tool:
     name: "🧙‍♂️ Generate Tool"
-    description: "Automates the creation of new Github workflows for user-defined tools."
+    description: "Generates a new Tool tailored to your project's needs."
     labels: [automation, tool, workflow]
 automations:
   format-issue:
