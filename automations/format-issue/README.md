@@ -20,3 +20,9 @@ Here are some ideas for what you could say:
 
 Your imagination is the limit!
 
+```mermaid
+graph TD;
+    A[New Issue Created] --> B[Automation Triggered];
+    B --> C[Format Issue Body];
+    B --> D[Add Labels Based on Title];
+```
