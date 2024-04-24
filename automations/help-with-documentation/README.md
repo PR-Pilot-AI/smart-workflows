@@ -7,6 +7,14 @@ This automation assists in enhancing project documentation by responding to issu
 - **Trigger Conditions:** The workflow is activated when an issue is labeled with `documentation`.
 - **Action:** Upon triggering, the automation analyzes the issue to understand the documentation needs. Depending on the requirements, it may directly update documentation files in the repository or compile documentation advice and post it as a comment on the issue.
 
+```mermaid
+graph TD;
+    A[Issue Labeled with 'documentation'] --> B[Automation Triggered];
+    B --> C[Analyze Issue for Documentation Needs];
+    C --> D[Update Documentation/Post Advice];
+```
+
+
 ## How to Use
 
 1. Ensure the **[Workflow YAML](./workflow.yaml)** file is placed in your `.github/workflows` directory.
@@ -19,10 +27,3 @@ This automation assists in enhancing project documentation by responding to issu
 - Modify the trigger conditions to include more specific scenarios or additional types of documentation requests.
 
 This automation streamlines the process of improving and updating project documentation, making it easier to maintain high-quality, comprehensive documentation.
-
-```mermaid
-graph TD;
-    A[Issue Labeled with 'documentation'] --> B[Automation Triggered];
-    B --> C[Analyze Issue for Documentation Needs];
-    C --> D[Update Documentation/Post Advice];
-```

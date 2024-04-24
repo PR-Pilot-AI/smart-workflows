@@ -2,6 +2,15 @@
 
 This automation listens for new issues created in your repository and automatically formats the issue body and adds labels based on the issue title.
 
+
+```mermaid
+graph TD;
+    A[New Issue Created] --> B[Automation Triggered];
+    B --> C[Format Issue Body];
+    B --> D[Add Labels Based on Title];
+```
+
+
 ## How to Use
 
 1. Copy the **[Workflow YAML](./workflow.yaml)** file into your `.github/workflows` directory. 
@@ -19,10 +28,3 @@ Here are some ideas for what you could say:
 * Any file name should be turned into Markdown links to the file in the repository
 
 Your imagination is the limit!
-
-```mermaid
-graph TD;
-    A[New Issue Created] --> B[Automation Triggered];
-    B --> C[Format Issue Body];
-    B --> D[Add Labels Based on Title];
-```

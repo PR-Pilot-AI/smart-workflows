@@ -2,6 +2,12 @@
 
 This automation listens for new pull requests created in your repository and automatically reviews the PR according to your preferences.
 
+```mermaid
+graph TD;
+    A[New PR Created] --> B[Automation Triggered];
+    B --> C[Review PR According to Preferences];
+```
+
 ## How to Use
 
 1. Copy the **[Workflow YAML](./workflow.yaml)** file into your `.github/workflows` directory. 
@@ -19,9 +25,3 @@ Here are some ideas for what you could say:
 * Watch out for code that could lead to GDPR violations
 
 Your imagination is the limit!
-
-```mermaid
-graph TD;
-    A[New PR Created] --> B[Automation Triggered];
-    B --> C[Review PR According to Preferences];
-```

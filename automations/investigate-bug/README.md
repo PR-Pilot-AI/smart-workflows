@@ -8,6 +8,16 @@ This automation is designed to assist in the initial investigation of issues lab
 - **Analysis Process:** The automation reads the issue, analyzes the description for keywords related to the bug, searches the codebase for related files using these keywords, and then reads the identified files.
 - **Output:** It generates a list of suggestions or recommendations based on the analysis and comments on the issue with this information.
 
+
+```mermaid
+graph TD;
+    A[Issue Labeled with 'bug'] --> B[Automation Triggered];
+    B --> C[Analyze Issue Description];
+    C --> D[Search Codebase for Related Files];
+    D --> E[Generate Suggestions/Recommendations];
+```
+
+
 ## How to Use
 
 1. Ensure the **[Workflow YAML](./workflow.yaml)** file is placed in your `.github/workflows` directory.
@@ -20,11 +30,3 @@ This automation is designed to assist in the initial investigation of issues lab
 - Adjust the trigger conditions to include more types of interactions or to narrow down the scope to very specific types of bugs.
 
 This automation provides a structured approach to bug investigation, helping to streamline the initial analysis and suggesting potential fixes or areas for further investigation.
-
-```mermaid
-graph TD;
-    A[Issue Labeled with 'bug'] --> B[Automation Triggered];
-    B --> C[Analyze Issue Description];
-    C --> D[Search Codebase for Related Files];
-    D --> E[Generate Suggestions/Recommendations];
-```
