@@ -9,8 +9,8 @@ on:
       trigger:
         description: 'What should trigger the automation?'
         required: true
-      agent-instructions:
-        description: 'What should the agent do when the automation is triggered?'
+      goal:
+        description: 'What should the automation accomplish when it is triggered?'
         required: true
 
 jobs:
@@ -28,20 +28,10 @@ jobs:
             The workflow should be called `${{ github.event.inputs.automation-name }}`.
             
             It should be triggered when:
-            ``` 
-            ${{ github.event.inputs.trigger }}
-            ```
+            **${{ github.event.inputs.trigger }}**
             
-            When triggered, the user wants the agent to do the following:
-            ```
-            ${{ github.event.inputs.agent-instructions }}
-            ```
-            
-            These instructions need to be turned into an actionable step-by-step guide for the AI agent to follow.
-            Make sure the step-by-step instructions are clear and concise.
-            
-            Assume that the agent has the same capabilities as you do. It is important to only include 
-            instructions that are within the agent's capabilities.
+            When triggered, the user workflow should accomplish the following goal:
+            **${{ github.event.inputs.goal }}**
             
             The workflow file must fulfill the following criteria:
             - Name of the workflow starts with an emoji (UTF-8 character)
@@ -51,12 +41,18 @@ jobs:
               - `agent-instructions` (Step-by-step instructions for the AI agent)
             
             If the agent's task requires data from the workflow run (e.g. issue ID, commit msg, etc),
-            then the text for `agent-instructions` should have these values injected into them using the 
-            github context variables.
+            or output from previous steps, then the text for `agent-instructions` should have these values injected 
+            into them using the github context variables.
+            
+            The agent instructions need to be an actionable step-by-step guide for the AI agent to follow.
+            Make sure the step-by-step instructions are clear and concise.
+            
+            Assume that the agent has the same capabilities as you do. It is important to only include 
+            instructions that are within the agent's capabilities.
             
             Do the following:
             1. Read `automations/investigate-bug/workflow.yaml` as reference to understand the desired structure of the workflow file.
-            2. Turn the free-text instructions provided by the user into actionable step-by-step instructions for the AI agent.
+            2. Turn the workflow goal provided by the user into job steps and actionable step-by-step instructions for the AI agent.
             3. Generate the new Github workflow file in `automations/<automation-name-slug>/workflow.yaml`
             4. Read `automations/investigate-bug/README.md` as reference to understand the desired structure of the README file for the workflow.
             5. Generate the new README file in `automations/<automation-name-slug>/README.md`
