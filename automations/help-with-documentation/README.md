@@ -19,3 +19,10 @@ This automation assists in enhancing project documentation by responding to issu
 - Modify the trigger conditions to include more specific scenarios or additional types of documentation requests.
 
 This automation streamlines the process of improving and updating project documentation, making it easier to maintain high-quality, comprehensive documentation.
+
+```mermaid
+graph TD;
+    A[Issue Labeled with 'documentation'] --> B[Automation Triggered];
+    B --> C[Analyze Issue for Documentation Needs];
+    C --> D[Update Documentation/Post Advice];
+```
