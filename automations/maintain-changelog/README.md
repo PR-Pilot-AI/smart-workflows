@@ -12,6 +12,15 @@ This automation is designed to update the `CHANGELOG.md` file whenever a new rel
   4. Updates `CHANGELOG.md` by adding a new section for the current release version and includes the assembled commit messages.
   5. Commits the changes to `CHANGELOG.md` with a message following the convention: `Update CHANGELOG.md for <current release version>`.
 
+```mermaid
+graph TD;
+    A[New Release Created] --> B[Check out the repository];
+    B --> C[Identify previous and current release tags];
+    C --> D[Assemble commit messages];
+    D --> E[Update CHANGELOG.md];
+    E --> F[Commit changes];
+```
+
 ## How to Use
 
 1. Ensure the **[Workflow YAML](./workflow.yaml)** file is placed in your `.github/workflows` directory.
