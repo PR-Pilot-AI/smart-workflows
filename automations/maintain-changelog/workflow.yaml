@@ -8,13 +8,16 @@ jobs:
   update-changelog:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Assemble commit messages
+        id: get_commits
+        run: |
+          echo "COMMIT_MESSAGES=$(git log $(git describe --tags --abbrev=0 $(git describe --tags --abbrev=0)^)..$(git describe --tags --abbrev=0) --pretty=format:'%s')" >> $GITHUB_ENV
       - name: Update CHANGELOG.md
         uses: PR-Pilot-AI/smart-actions/quick-task@v1
         with:
           api-key: ${{ secrets.PR_PILOT_API_KEY }}
           agent-instructions: |
-            1. Check out the repository.
-            2. Identify the previous release tag and the current release tag from the trigger event.
-            3. Assemble all commit messages between the new release and the previous one.
-            4. Update `CHANGELOG.md` by adding a new section for the current release version and include the assembled commit messages.
-            5. Commit the changes to `CHANGELOG.md` with a message following the convention: `Update CHANGELOG.md for <current release version>`.
+            1. Update `CHANGELOG.md` by adding a new section for the current release version and include the commit messages stored in the environment variable.
+            2. Commit the changes to `CHANGELOG.md` with a message following the convention: `Update CHANGELOG.md for <current release version>`.
