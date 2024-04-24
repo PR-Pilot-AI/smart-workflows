@@ -3,11 +3,11 @@ name: "🚀 Plan and Execute"
 on:
   workflow_dispatch:
     inputs:
-      what-to-plan:
-        description: 'What should the agent make a plan for?'
+      high-level-task:
+        description: 'What should the agent plan and execute?'
         required: true
-      how-to-execute:
-        description: 'How should the agent execute the plan?'
+      goal:
+        description: 'What is the goal of the task?'
         required: true
 
 jobs:
@@ -24,10 +24,22 @@ jobs:
             The user wants you to create a step-by-step plan for the following:
             
             ```
-            ${{ github.event.inputs.what-to-plan }}
+            ${{ github.event.inputs.high-level-task }}
             ```
             
+            The goal of the task is:
+            ${{ github.event.inputs.goal }}
+            
             The plan will later be executed by you, so make sure it is within your capabilities.
+            The plan should:
+            - Be clear and concise and use imperative language
+            
+            The following should NOT be part of the plan:
+            - Any action that requires user input
+            - Any action that requires executing scripts or code
+            - Any action that requires testing or validation
+            
+            Create the plan.
       - name: Execute the plan
         id: execute-plan
         uses: PR-Pilot-AI/smart-actions/quick-task@v1
@@ -37,14 +49,9 @@ jobs:
           agent-instructions: |
             We have the following step-by-step plan for you to execute:
             
-            ```
             ${{ steps.create-plan.outputs.task-result }}
-            ```
             
-            The user has requested that you execute the plan in the following way:
+            The goal of the task is:
+            ${{ github.event.inputs.goal }}
             
-            ```
-            ${{ github.event.inputs.how-to-execute }}
-            ```
-            
-            Execute the plan to the best of your ability.
+            Execute the plan to achieve the goal.
