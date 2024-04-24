@@ -20,3 +20,11 @@ This automation is designed to assist in the initial investigation of issues lab
 - Adjust the trigger conditions to include more types of interactions or to narrow down the scope to very specific types of bugs.
 
 This automation provides a structured approach to bug investigation, helping to streamline the initial analysis and suggesting potential fixes or areas for further investigation.
+
+```mermaid
+graph TD;
+    A[Issue Labeled with 'bug'] --> B[Automation Triggered];
+    B --> C[Analyze Issue Description];
+    C --> D[Search Codebase for Related Files];
+    D --> E[Generate Suggestions/Recommendations];
+```

@@ -20,3 +20,11 @@ This automation enables you to turn any Github issue into a conversation with yo
 - Adjust the trigger conditions to include more types of interactions or to narrow down the scope to very specific actions.
 
 This automation provides a basic framework for engaging with users or contributors in a more interactive manner, making the issue handling process feel more personal and dynamic.
+
+```mermaid
+graph TD;
+    A[Issue Created/Commented] -->|Labeled with 'chat'| B[Automation Triggered];
+    B --> C{Is it a bot comment?};
+    C -->|No| D[Respond to Comment];
+    C -->|Yes| E[Ignore];
+```

@@ -20,3 +20,8 @@ Here are some ideas for what you could say:
 
 Your imagination is the limit!
 
+```mermaid
+graph TD;
+    A[New PR Created] --> B[Automation Triggered];
+    B --> C[Review PR According to Preferences];
+```
