@@ -1,0 +1,50 @@
+name: "🚀 Plan and Execute"
+
+on:
+  workflow_dispatch:
+    inputs:
+      what-to-plan:
+        description: 'What should the agent make a plan for?'
+        required: true
+      how-to-execute:
+        description: 'How should the agent execute the plan?'
+        required: true
+
+jobs:
+  execute-and-plan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create a step-by-step plan
+        id: create-plan
+        uses: PR-Pilot-AI/smart-actions/quick-task@v1
+        with:
+          api-key: ${{ secrets.PR_PILOT_API_KEY }}
+          sdk-version: 1.3.1
+          agent-instructions: |
+            The user wants you to create a step-by-step plan for the following:
+            
+            ```
+            ${{ github.event.inputs.what-to-plan }}
+            ```
+            
+            The plan will later be executed by you, so make sure it is within your capabilities.
+      - name: Execute the plan
+        id: execute-plan
+        uses: PR-Pilot-AI/smart-actions/quick-task@v1
+        with:
+          api-key: ${{ secrets.PR_PILOT_API_KEY }}
+          sdk-version: 1.3.1
+          agent-instructions: |
+            We have the following step-by-step plan for you to execute:
+            
+            ```
+            ${{ steps.create-plan.outputs.task-result }}
+            ```
+            
+            The user has requested that you execute the plan in the following way:
+            
+            ```
+            ${{ github.event.inputs.how-to-execute }}
+            ```
+            
+            Execute the plan to the best of your ability.
