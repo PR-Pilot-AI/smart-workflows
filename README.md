@@ -29,6 +29,7 @@ Workflows that run automatically in response to [Github events](https://docs.git
 | **[🔍 PR Auto Review](automations/pr-auto-review)**            | Every new PR will be reviewed by an AI Agent according to your preferences                             |
 | **[🐞 Investigate Bug](automations/investigate-bug)**          | Automatically investigates issues labeled as `bug` by analyzing the codebase and providing suggestions |
 | **[📚 Help with Documentation](automations/help-with-documentation)** | Automatically assists with documentation tasks when the `documentation` label is added to an issue     |
+| **[📝 Maintain Changelog](automations/maintain-changelog)**    | Automatically updates the `CHANGELOG.md` file whenever a new release is created                        |
 
 ### Tools
 
@@ -50,3 +51,4 @@ If you'd like to contribute workflows, simply:
 2. Run the **[🧙‍♂️ Generate Automation](tools/generate-automation)** or **[🧙‍♂️ Generate Tool](tools/generate-tool)** workflows
 3. Customize the code the agent generated for you in a PR and merge it
 4. Open a PR to this project
+

@@ -40,3 +40,7 @@ automations:
     name: "📚 Help with Documentation"
     description: "Automatically assists with documentation tasks when the `documentation` label is added to an issue."
     labels: [documentation, help, automate]
+  maintain-changelog:
+    name: "📝 Maintain Changelog"
+    description: "Automatically updates the CHANGELOG.md file whenever a new release is created by assembling all commit messages between the new release and the previous one."
+    labels: [changelog, release, automate]
