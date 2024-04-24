@@ -3,8 +3,9 @@
 This is a repository for **agentic Github workflows** that use an AI agent
 to automate Github projects in powerful ways.
 
-* **plug-and-play** - Works out-of-the box, just copy YAML files
-* **fully customizable** using natural language instructions.
+* **Plug-and-play** - Works out-of-the box, just copy YAML files
+* **Fully Customizable** using natural language instructions.
+* **LLM Best Practices** baked in, so you can focus on what matters
 
 To use them in your project:
 
