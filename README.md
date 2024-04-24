@@ -35,11 +35,11 @@ Workflows for you to run manually via the Github Actions tab in your repository.
 
 | Name | Description                                  |
 | ---- |----------------------------------------------|
-| **[🚀 Quick Task](tools/quick-task)** | Simply ask the agent to do something for you |
+| **[🚀 Quick Task](tools/quick-task)** | Instruct the agent to do something for you in your own words |
 | **[🤖 Answer Question](tools/answer-question)** | Ask a question about your project / code |
 | **[🧙‍♂️ Generate Automation](tools/generate-automation)** | Generate custom automations tailored to your project |
 | **[🧙‍♂️ Generate Tool](tools/generate-tool)** | Generate custom tools tailored to your project |
-| **[🔄 Import Workflow](tools/import-workflow)** | Facilitate interaction with an AI agent for importing workflows |
+| **[🔄 Import Workflow](tools/import-workflow)** | One-click solution for adding Smart Workflows to your project  |
 
 ### Contributing
 
