@@ -28,7 +28,10 @@ jobs:
           fi
       - name: Copy workflow file
         id: print-workflow
-        run: cat ${{ steps.filepath.outputs.path }}
+        run: |
+          workflow=$(cat ${{ steps.filepath.outputs.path }})
+          echo "WORKFLOW<<EOF"$'\n'"$workflow"$'\n'EOF >> "$GITHUB_OUTPUT"
+
       - name: Import Workflow
         uses: PR-Pilot-AI/smart-actions/quick-task@v1
         with:
@@ -38,7 +41,7 @@ jobs:
 
             ---
             
-            ${{ steps.print-workflow.outputs.content }}
+            ${{ steps.print-workflow.outputs.WORKFLOW }}
 
             ---
 
