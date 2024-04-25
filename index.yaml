@@ -19,6 +19,10 @@ tools:
     name: "🔄 Import Workflow"
     description: "Install a Smart Workflow into your project with the click of a button."
     labels: [import, workflow, meta]
+  quick-code-change:
+    name: "🛠 Quick Code Change"
+    description: "Facilitate quick code modifications through an AI agent based on user inputs."
+    labels: [code, modify, ai]
 automations:
   format-issue:
     name: "📝 Format and Label New Issues"

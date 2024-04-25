@@ -53,6 +53,7 @@ Workflows for you to run manually via the Github Actions tab in your repository.
 | **[🧙‍♂️ Generate Automation](tools/generate-automation)** | Generate custom automations tailored to your project |
 | **[🧙‍♂️ Generate Tool](tools/generate-tool)** | Generate custom tools tailored to your project |
 | **[🔄 Import Workflow](tools/import-workflow)** | One-click solution for adding Smart Workflows to your project  |
+| **[🛠 Quick Code Change](tools/quick-code-change)** | Facilitate quick code modifications through an AI agent based on user inputs |
 
 ### Contributing
 
