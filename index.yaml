@@ -31,6 +31,10 @@ tools:
     name: "✍️ Write Technical Specification"
     description: "Generates technical specifications based on user stories through an AI agent."
     labels: [specification, user-story, ai]
+  draw-diagram:
+    name: "📊 Draw Diagram"
+    description: "Enable users to interact with an AI agent for generating diagrams based on code or files."
+    labels: [diagram, visualize, ai]
 automations:
   format-issue:
     name: "📝 Format and Label New Issues"
