@@ -18,4 +18,19 @@ jobs:
         uses: PR-Pilot-AI/smart-actions/quick-task@v1
         with:
           api-key: ${{ secrets.PR_PILOT_API_KEY }}
-          agent-instructions: "1. Search the code or internet for relevant context based on the `relevant-context` input.\n2. Open a new issue with a comprehensive user story including the story, links to relevant files or websites, scope, value to the user, and acceptance criteria."
+          agent-instructions: |
+            I have the following user story:
+            ${{ inputs.user-story }}
+
+            Relevant context:
+            ${{ inputs.relevant-context }}
+
+            I want a comprehensive user story with:
+            - The story itself
+            - Markdown links to the relevant context files or websites
+            - Clearly defined scope
+            - Value of the story to the user
+            - List of checkbox acceptance criteria
+            
+            1. Search the code or internet for relevant context and read it
+            2. Open a new issue containing the full, comprehensive user story and label it `user-story`
