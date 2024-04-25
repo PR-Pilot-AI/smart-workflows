@@ -23,6 +23,10 @@ tools:
     name: "🛠 Quick Code Change"
     description: "Facilitate quick code modifications through an AI agent based on user inputs."
     labels: [code, modify, ai]
+  write-user-story:
+    name: "✍️ Write User Story"
+    description: "Facilitates the creation of comprehensive user stories by interacting with an AI agent."
+    labels: [user-story, ai, documentation]
 automations:
   format-issue:
     name: "📝 Format and Label New Issues"
