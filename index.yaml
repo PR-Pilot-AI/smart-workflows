@@ -27,6 +27,10 @@ tools:
     name: "✍️ Write User Story"
     description: "Generate comprehensive user stories for your code base."
     labels: [user-story, best-practices, product]
+  write-technical-specification:
+    name: "✍️ Write Technical Specification"
+    description: "Generates technical specifications based on user stories through an AI agent."
+    labels: [specification, user-story, ai]
 automations:
   format-issue:
     name: "📝 Format and Label New Issues"
