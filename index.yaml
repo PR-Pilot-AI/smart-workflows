@@ -33,8 +33,8 @@ tools:
     labels: [specification, user-story, ai]
   draw-diagram:
     name: "📊 Draw Diagram"
-    description: "Enable users to interact with an AI agent for generating diagrams based on the repository's code and files."
-    labels: [diagram, visualize, ai]
+    description: "Fenerate Mermaid diagrams based on the repository's code and files."
+    labels: [diagram, visualize]
 automations:
   format-issue:
     name: "📝 Format and Label New Issues"
