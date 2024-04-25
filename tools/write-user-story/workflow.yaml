@@ -1,0 +1,21 @@
+name: "✍️ Write User Story"
+
+on:
+  workflow_dispatch:
+    inputs:
+      user-story:
+        description: 'As ... I want to... so...'
+        required: true
+      relevant-context:
+        description: 'Code, keywords, etc'
+        required: true
+
+jobs:
+  generate_user_story:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate User Story Issue
+        uses: PR-Pilot-AI/smart-actions/quick-task@v1
+        with:
+          api-key: ${{ secrets.PR_PILOT_API_KEY }}
+          agent-instructions: "1. Search the code or internet for relevant context based on the `relevant-context` input.\n2. Open a new issue with a comprehensive user story including the story, links to relevant files or websites, scope, value to the user, and acceptance criteria."
