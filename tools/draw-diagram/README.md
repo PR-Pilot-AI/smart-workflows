@@ -2,7 +2,7 @@
 
 **ID**: `draw-diagram`
 
-A tool designed to enable users to interact with an AI agent for generating diagrams based on the repository's code and files.
+A tool designed to quickly let you generate [Mermaid diagrams](https://mermaid.js.org/).
 
 ## How to Use
 
@@ -16,5 +16,5 @@ This tool requires the following inputs:
 
 | Input             | Description                                      | Example                                  |
 |-------------------|--------------------------------------------------|------------------------------------------|
-| `diagram-type`    | The type of diagram you want to create.          | `class`, `sequence`                      |
-| `what-to-visualize` | Describe what aspect of the project to visualize. | `authentication flow`, `database schema` |
+| `diagram-type`    | The type of Mermaid diagram you want to create.          | flow diagram                      |
+| `what-to-visualize` | Describe what aspect of the project to visualize. | Interaction between `TaskEngine` and `TaskScheduler` classes |
