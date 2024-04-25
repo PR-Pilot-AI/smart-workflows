@@ -56,3 +56,7 @@ automations:
     name: "📚 Help with Documentation"
     description: "Automatically assists with documentation tasks when the `needs-documentation` label is added to an issue."
     labels: [documentation, help, automate]
+  refine-issue:
+    name: "🔍 Refine Issue"
+    description: "Automatically refines issues labeled with `needs-refinement` by analyzing the issue description, searching the codebase for related files, and enhancing the issue with relevant context and acceptance criteria."
+    labels: [refinement, context, criteria]
