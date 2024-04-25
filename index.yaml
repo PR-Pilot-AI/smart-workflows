@@ -23,6 +23,10 @@ tools:
     name: "🛠 Quick Code Change"
     description: "Facilitate quick code modifications through an AI agent based on user inputs."
     labels: [code, modify, ai]
+  write-technical-specification:
+    name: "✍️ Write Technical Specification"
+    description: "Generates technical specifications based on user stories through an AI agent."
+    labels: [specification, user-story, ai]
 automations:
   format-issue:
     name: "📝 Format and Label New Issues"
