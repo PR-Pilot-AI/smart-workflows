@@ -19,7 +19,8 @@ jobs:
         with:
           api-key: ${{ secrets.PR_PILOT_API_KEY }}
           agent-instructions: |
-            1. Read the code specified in `code-to-change`.
-            2. Apply the changes as described in `how-to-change-it`.
-            3. If necessary, use the context variables to inject data from the workflow run.
-            4. Commit the changes with a message that describes the change.
+            Read the following code:
+            ${{ inputs.code-to-change }}
+
+            and change it in the following way:
+            ${{ inputs.how-to-change-it }}
