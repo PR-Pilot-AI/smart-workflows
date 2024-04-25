@@ -1,6 +1,6 @@
 name: "📚 Help with Documentation"
 
-# Triggers the workflow when a label `documentation` is added to an issue
+# Triggers the workflow when a label `needs-documentation` is added to an issue
 on:
   issues:
     types: [labeled]
@@ -8,7 +8,7 @@ on:
 jobs:
   documentation-help:
     runs-on: ubuntu-latest
-    if: github.event.label.name == 'documentation'
+    if: github.event.label.name == 'needs-documentation'
     steps:
       - name: Provide Documentation Help
         uses: PR-Pilot-AI/smart-actions/quick-task@v1

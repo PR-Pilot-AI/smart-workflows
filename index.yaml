@@ -54,5 +54,5 @@ automations:
     labels: [bug, investigate, code-analysis]
   help-with-documentation:
     name: "📚 Help with Documentation"
-    description: "Automatically assists with documentation tasks when the `documentation` label is added to an issue."
+    description: "Automatically assists with documentation tasks when the `needs-documentation` label is added to an issue."
     labels: [documentation, help, automate]

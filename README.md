@@ -39,7 +39,7 @@ Workflows that run automatically in response to [Github events](https://docs.git
 | **[📝 Format and Label New Issues](automations/format-issue)** | Automatically format and label every new issue created in your project                                 |
 | **[🔍 PR Auto Review](automations/pr-auto-review)**            | Every new PR will be reviewed by an AI Agent according to your preferences                             |
 | **[🐞 Investigate Bug](automations/investigate-bug)**          | Automatically investigates issues labeled as `bug` by analyzing the codebase and providing suggestions |
-| **[📚 Help with Documentation](automations/help-with-documentation)** | Automatically assists with documentation tasks when the `documentation` label is added to an issue     |
+| **[📚 Help with Documentation](automations/help-with-documentation)** | Automatically assists with documentation tasks when the `needs-documentation` label is added to an issue     |
 
 ### Tools
 
