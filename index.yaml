@@ -25,8 +25,8 @@ tools:
     labels: [code, modify, ai]
   write-user-story:
     name: "✍️ Write User Story"
-    description: "Facilitates the creation of comprehensive user stories by interacting with an AI agent."
-    labels: [user-story, ai, documentation]
+    description: "Generate comprehensive user stories for your code base."
+    labels: [user-story, best-practices, product]
 automations:
   format-issue:
     name: "📝 Format and Label New Issues"
