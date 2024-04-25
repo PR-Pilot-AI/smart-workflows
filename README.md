@@ -56,12 +56,13 @@ Workflows for you to run manually via the Github Actions tab in your repository.
 | **[🛠 Quick Code Change](tools/quick-code-change)** | Facilitate quick code modifications through an AI agent based on user inputs |
 | **[✍️ Write User Story](tools/write-user-story)** | Generate comprehensive user stories for your code base |
 | **[✍️ Write Technical Specification](tools/write-technical-specification)** | Generates technical specifications based on user stories through an AI agent |
+| **[📊 Draw Diagram](tools/draw-diagram)** | Enable users to interact with an AI agent for generating diagrams based on code or files |
 
 ### Contributing
 
 If you'd like to contribute workflows, simply:
 
 1. Fork the project
-2. Run the **[🧙‍♂️ Generate Automation](tools/generate-automation)** or **[🧙‍♂️ Generate Tool](tools/generate-tool)** workflows
+2. Run the **[🧙‍♂️ Generate Automation](tools/generate-tool)** or **[🧙‍♂️ Generate Tool](tools/generate-tool)** workflows
 3. Customize the code the agent generated for you in a PR and merge it
 4. Open a PR to this project
