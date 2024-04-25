@@ -12,6 +12,10 @@ on:
       agent-instructions:
         description: 'What should the agent do when the tool is executed?'
         required: true
+      template-tool:
+        description: 'ID of the tool to be used as example'
+        required: true
+        default: 'quick-code-change'
 
 jobs:
   automate-tool-creation:
@@ -56,10 +60,10 @@ jobs:
             github context variables.
             
             Do the following:
-            1. Read `tools/quick-task/workflow.yaml` as reference to understand the desired structure of the workflow file.
+            1. Read `tools/${{ github.event.inputs.template-tool }}/workflow.yaml` as reference to understand the desired structure of the workflow file.
             2. Turn the free-text instructions provided by the user into actionable step-by-step instructions for the AI agent.
             3. Generate the new Github workflow file in `tools/<tool-name-slug>/workflow.yaml`
-            4. Read `tools/quick-task/README.md` as reference to understand the desired structure of the README file for the workflow.
+            4. Read `tools/${{ github.event.inputs.template-tool }}/README.md` as reference to understand the desired structure of the README file for the workflow.
             5. Generate the new README file in `tools/<tool-name-slug>/README.md`
             6. Add the tool to `index.yaml` with the appropriate details
             7. Add the tool to the README.md file with the appropriate details

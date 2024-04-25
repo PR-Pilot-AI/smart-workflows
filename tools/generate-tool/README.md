@@ -13,8 +13,9 @@ A powerful tool that automates the creation of custom tools for your Github proj
 
 This tool requires the following inputs:
 
-| Input | Description | Example |
-| --- | --- | --- |
-| `tool-name` | Name of the tool you want to create. | `Issue Summarizer` |
-| `tool-inputs` | Inputs required for the tool. | `The issue number` |
+| Input | Description                                                                   | Example                                                |
+| --- |-------------------------------------------------------------------------------|--------------------------------------------------------|
+| `tool-name` | Name of the tool you want to create.                                          | `Issue Summarizer`                                     |
+| `tool-inputs` | Inputs required for the tool.                                                 | `The issue number`                                     |
 | `agent-instructions` | Detailed instructions for what the agent should do when the tool is executed. | `Summarize the issue and add the summary as a comment` |
+| `template-tool` | ID of the tool to use as a base for the new tool.                             | `quick-code-change`                                    |
