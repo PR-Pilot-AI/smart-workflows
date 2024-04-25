@@ -1,5 +1,7 @@
 # 📝 Format and Label New Issues
 
+**ID**: `format-issue`
+
 This automation listens for new issues created in your repository and automatically formats the issue body and adds labels based on the issue title.
 
 

@@ -1,5 +1,7 @@
 # 🐞 Investigate Bug Automation
 
+**ID**: `investigate-bug`
+
 This automation is designed to assist in the initial investigation of issues labeled with `bug` by automatically analyzing the issue description and searching the codebase for related files. It then generates a list of suggestions or recommendations to address the bug.
 
 ## How it Works

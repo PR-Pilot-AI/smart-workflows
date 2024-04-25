@@ -1,5 +1,7 @@
 # 🔍 Review New Pull Request
 
+**ID**: `quick-task`
+
 This automation listens for new pull requests created in your repository and automatically reviews the PR according to your preferences.
 
 ```mermaid

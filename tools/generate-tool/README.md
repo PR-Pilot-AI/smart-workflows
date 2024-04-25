@@ -1,5 +1,7 @@
 # 🧙‍♂️ Generate Tool
 
+**ID**: `generate-tool`
+
 A powerful tool that automates the creation of custom tools for your Github project.
 
 ## How to Use

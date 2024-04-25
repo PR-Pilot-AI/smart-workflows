@@ -1,5 +1,7 @@
 # 📝 Maintain Changelog Automation
 
+**ID**: `maintain-changelog`
+
 This automation is designed to update the `CHANGELOG.md` file whenever a new release is created. It assembles all commit messages between the new release and the previous one, and updates the changelog accordingly.
 
 ## How it Works

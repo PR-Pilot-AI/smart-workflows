@@ -1,5 +1,7 @@
 # 🤖 Answer Question
 
+**ID**: `answer-question`
+
 A tool designed to answer questions by searching the codebase and, if necessary, the internet for relevant information.
 
 ## How to Use

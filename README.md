@@ -20,7 +20,8 @@ to automate Github projects in powerful ways.
 To use them in your project:
 
 1. **[Install the AI agent](https://github.com/apps/pr-pilot-ai/installations/new)** on your repository
-2. Copy one or more workflows into `.github/workflows/` in your repository
+2. Add the **[🔄 Import Workflow](tools/import-workflow)** tool to your project
+3. Use the tool to import any workflow you like
 
 That's it!
 

@@ -1,5 +1,7 @@
 # 📚 Help with Documentation Automation
 
+**ID**: `help-with-documentation`
+
 This automation assists in enhancing project documentation by responding to issues labeled with `documentation`.
 
 ## How it Works

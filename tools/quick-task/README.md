@@ -1,5 +1,7 @@
 # 🚀 Quick Task
 
+**ID**: `quick-task`
+
 A simple tool that lets quickly lets you hand off work to the AI agent.
 
 ## How to Use

@@ -1,5 +1,7 @@
 # 🧙‍♂️ Generate Automation
 
+**ID**: `generate-automation`
+
 A powerful tool that enables the creation of custom automations within your GitHub repository.
 
 ## How to Use
