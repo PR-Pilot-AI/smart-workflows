@@ -19,7 +19,12 @@ jobs:
         with:
           api-key: ${{ secrets.PR_PILOT_API_KEY }}
           agent-instructions: |
-            1. Search the repository to find code and read files based on `${{ inputs.what-to-visualize }}`.
-            2. Create a new issue titled "Diagram: ${{ inputs.diagram-type }} of ${{ inputs.what-to-visualize }}".
-            3. In the issue, include a Mermaid diagram of type `${{ inputs.diagram-type }}` visualizing the specified concept.
-            4. Provide a brief description of the diagram within the issue.
+            I want a Mermaid diagram for the following:
+            ${{ inputs.what-to-visualize }}
+
+            It should be a diagram of type:
+            ${{ inputs.diagram-type }}
+            
+            1. Search the repository to find code and read files relevant to what we want to visualize
+            2. Create a new issue titled "<type> Diagram of <Visualization>".
+            3. In the issue body, put the Mermaid diagram and a description
