@@ -60,3 +60,7 @@ automations:
     name: "🔍 Refine Issue"
     description: "Automatically refines issues labeled with `needs-refinement` by analyzing the issue description, searching the codebase for related files, and enhancing the issue with relevant context and acceptance criteria."
     labels: [refinement, context, criteria]
+  help-with-implementation:
+    name: "🛠 Help with Implementation"
+    description: "Automatically assists with implementation tasks when the `needs-work` label is added to an issue by reading the issue, understanding the requirements, searching for related files, and writing the necessary changes."
+    labels: [implementation, code-change, automate]
