@@ -64,3 +64,7 @@ automations:
     name: "🛠 Help with Implementation"
     description: "Automatically assists with implementation tasks when the `needs-work` label is added to an issue by reading the issue, understanding the requirements, searching for related files, and writing the necessary changes."
     labels: [implementation, code-change, automate]
+  enforce-contribution-guidelines:
+    name: "📐 Enforce Contribution Guidelines"
+    description: "Automatically ensures that new pull requests adhere to the project's contribution guidelines."
+    labels: [contribution, guidelines, pr]
