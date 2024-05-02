@@ -42,6 +42,7 @@ Workflows that run automatically in response to [Github events](https://docs.git
 | **[📚 Help with Documentation](automations/help-with-documentation)** | Automatically assists with documentation tasks when the `needs-documentation` label is added to an issue     |
 | **[🔍 Refine Issue](automations/refine-issue)**                | Automatically refines issues labeled with `needs-refinement` by analyzing the issue description, searching the codebase for related files, and enhancing the issue with relevant context and acceptance criteria |
 | **[🛠 Help with Implementation](automations/help-with-implementation)** | Automatically assists with implementation tasks when the `needs-work` label is added to an issue by reading the issue, understanding the requirements, searching for related files, and writing the necessary changes |
+| **[📐 Enforce Contribution Guidelines](automations/enforce-contribution-guidelines)** | Automatically ensures that new pull requests adhere to the project's contribution guidelines |
 
 ### Tools
 
