@@ -22,6 +22,13 @@ jobs:
         with:
           api-key: ${{ secrets.PR_PILOT_API_KEY }}
           agent-instructions: |
-            1. Use the `programming-language` and `framework` (if provided) inputs to search the internet for information on how to start a project with these specifications.
+            This is an empty project and we want to initialize it.
+
+            Programming language: ${{ github.event.inputs.programming-language }}
+            Framework (optional): ${{ github.event.inputs.framework }}
+            Project description:
+            ${{ github.event.inputs.project-description }}
+            
+            1. Use the programming language and framework (if provided) to search the internet for information on how to start a project with these specifications.
             2. Compile the information into concise, actionable instructions for starting the project, including a list of initial files that need to be created.
-            3. Create a Github issue in the repository titled "Project Initialization Instructions" with the compiled instructions and file list. Label the issue `needs-refinement`.
+            3. Create a Github issue in the repository with the compiled instructions and detailed list of files to create. Label the issue `needs-refinement`.
