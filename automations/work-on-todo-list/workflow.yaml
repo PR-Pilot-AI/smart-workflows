@@ -1,0 +1,22 @@
+name: "📋 Work on TODO List"
+
+on:
+  push:
+    paths:
+      - 'TODO.md'
+    branches:
+      - main
+
+jobs:
+  work-on-todo-list:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Work on Next TODO Item
+        uses: PR-Pilot-AI/smart-actions/quick-task@v1
+        with:
+          api-key: ${{ secrets.PR_PILOT_API_KEY }}
+          agent-instructions: |
+            1. Read `TODO.md` from the main branch.
+            2. Identify the next open item on the TODO list.
+            3. Fulfill the identified task to the best of your abilities. If it requires making changes to the code, ensure to commit those changes with a message that includes the task description.
+            4. If all items on the TODO list are completed, delete `TODO.md` and commit the deletion with a message "Completed all TODO items".
