@@ -35,6 +35,10 @@ tools:
     name: "📊 Draw Diagram"
     description: "Fenerate Mermaid diagrams based on the repository's code and files."
     labels: [diagram, visualize]
+  initialize-project:
+    name: "🚀 Initialize Project"
+    description: "Assist users in setting up a new project by generating a Github issue with concise, actionable instructions and a list of files to be created, based on the specified programming language and optional framework."
+    labels: [initialize, project, setup]
 automations:
   format-issue:
     name: "📝 Format and Label New Issues"

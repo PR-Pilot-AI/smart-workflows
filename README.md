@@ -59,6 +59,7 @@ Workflows for you to run manually via the Github Actions tab in your repository.
 | **[✍️ Write User Story](tools/write-user-story)** | Generate comprehensive user stories for your code base |
 | **[✍️ Write Technical Specification](tools/write-technical-specification)** | Generates technical specifications based on user stories through an AI agent |
 | **[📊 Draw Diagram](tools/draw-diagram)** | Generate Mermaid diagrams based on the repository's code and files |
+| **[🚀 Initialize Project](tools/initialize-project)** | Assist users in setting up a new project by generating a Github issue with concise, actionable instructions and a list of files to be created, based on the specified programming language and optional framework |
 
 ### Contributing
 
