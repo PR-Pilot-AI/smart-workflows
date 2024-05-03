@@ -45,6 +45,4 @@ jobs:
 
             ---
             
-            The user can customize the workflow by instructing you using the `/pilot <prompt>` command. 
-            Read the `README.md` file to learn more about the project, then respond to the user with a few prompt 
-            suggestions on how they could customize the workflow for this project.
+            Respond to the user with a few suggestions on how they could customize the workflow for this project.
