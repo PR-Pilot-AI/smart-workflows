@@ -16,7 +16,8 @@ jobs:
         with:
           api-key: ${{ secrets.PR_PILOT_API_KEY }}
           agent-instructions: |
-            1. Read `TODO.md` from the main branch.
+            1. Read `TODO.md`
             2. Identify the next open item on the TODO list.
-            3. Fulfill the identified task to the best of your abilities. If it requires making changes to the code, ensure to commit those changes with a message that includes the task description.
-            4. If all items on the TODO list are completed, delete `TODO.md` and commit the deletion with a message "Completed all TODO items".
+            3. Fulfill the identified task to the best of your abilities.
+            4. Edit `TODO.md` to mark the item you worked on as checked
+            5. If all items on the TODO list are completed, delete `TODO.md`
