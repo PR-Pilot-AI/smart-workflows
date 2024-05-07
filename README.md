@@ -44,6 +44,7 @@ Workflows that run automatically in response to [Github events](https://docs.git
 | **[🛠 Help with Implementation](automations/help-with-implementation)** | Automatically assists with implementation tasks when the `needs-work` label is added to an issue by reading the issue, understanding the requirements, searching for related files, and writing the necessary changes |
 | **[📐 Enforce Contribution Guidelines](automations/enforce-contribution-guidelines)** | Automatically ensures that new pull requests adhere to the project's contribution guidelines |
 | **[📋 Work on TODO List](automations/work-on-todo-list)** | Automatically works on items listed in the TODO.md file when updated on the main branch. If all items are completed, it deletes the TODO.md file. |
+| **[👩‍💼 Product Owner](automations/product-owner)** | Acts as a virtual Product Owner, modifying issues labeled with `feature-request` to include structured sections for user story, functional and non-functional requirements, and out of scope. |
 
 ### Tools
 
