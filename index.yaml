@@ -76,3 +76,7 @@ automations:
     name: "📋 Work on TODO List"
     description: "Automatically works on items listed in the TODO.md file when updated on the main branch. If all items are completed, it deletes the TODO.md file."
     labels: [todo, automate, task]
+  product-owner:
+    name: "👩‍💼 Product Owner"
+    description: "Acts as a virtual Product Owner, modifying issues labeled with `feature-request` to include structured sections for user story, functional and non-functional requirements, and out of scope."
+    labels: [feature-request, user-story, requirements]
