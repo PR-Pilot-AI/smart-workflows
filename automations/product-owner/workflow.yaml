@@ -17,5 +17,5 @@ jobs:
           agent-instructions: |
             1. Read the issue with ID `${{ github.event.issue.number }}`.
             2. Read the `README.md` file to understand the project.
-            3. Modify the issue to include sections for user story, functional and non-functional requirements, and out of scope.
-            4. Comment on the issue summarizing the modifications.
+            3. Edit the issue to include sections for user story, functional and non-functional requirements, and out of scope.
+            4. Add label `needs-refinement` to the issue
